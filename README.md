@@ -35,12 +35,12 @@ Certifique-se de ter o [Node.js](https://nodejs.org/en/) e o [npm](https://www.n
 
 ### Instalação
 
-1.  Clone este repositório (você já fez isso!):
+1.  Clone este repositório 
     ```bash
     git clone [https://github.com/Xandetds/Projeto-Front-end.git](https://github.com/Xandetds/Projeto-Front-end.git)
     ```
 
-2.  Navegue até a pasta do projeto (você já está aqui!):
+2.  Navegue até a pasta do projeto 
     ```bash
     cd Projeto-Front-end
     ```
@@ -54,7 +54,7 @@ Certifique-se de ter o [Node.js](https://nodejs.org/en/) e o [npm](https://www.n
 
 Para simular o backend e ter acesso aos dados, você precisa rodar o JSON Server em um terminal separado.
 
-1.  Crie um arquivo `db.json` na raiz do projeto com seus dados de livros e usuários. (Exemplo de estrutura será fornecido em breve).
+1.  Crie um arquivo `db.json` na raiz do projeto com seus dados de livros e usuários. 
 2.  No terminal, na raiz do projeto, execute:
     ```bash
     npx json-server --watch db.json --port 3001
