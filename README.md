@@ -1,77 +1,38 @@
 # Plataforma de Streaming de Livros Digitais
 
-Este repositório contém o código-fonte de um projeto de front-end desenvolvido em **React.js** para uma avaliação. O objetivo é simular uma plataforma de streaming de livros digitais, onde usuários podem explorar e "ler" livros, e administradores podem gerenciar o catálogo de livros e os usuários do sistema.
+## Visão Geral do Projeto
 
-## Requisitos Atendidos (Avaliação Front-end)
+Este projeto apresenta uma aplicação web de front-end construída com **React.js**, simulando uma plataforma de streaming de livros digitais. O objetivo principal é demonstrar proficiência em desenvolvimento de Single Page Applications (SPA), interação com APIs RESTful, gerenciamento de estado e manipulação de dados, além de práticas de desenvolvimento moderno.
 
-Este projeto foi desenvolvido para cumprir os seguintes requisitos:
+## Funcionalidades Chave
 
-1.  **Aplicação em React.js:** Construída do zero utilizando o framework React.
-2.  **Layout Agradável e Responsivo:** A interface se adapta a diferentes tamanhos de tela (desktop, tablet, mobile).
-3.  **JSON Server para Persistência de Dados:** Utiliza o JSON Server para simular uma API RESTful para o armazenamento de dados de livros e usuários.
-4.  **Requisições HTTP:** Todas as interações com o "backend" (JSON Server) são feitas via requisições HTTP (GET, POST, PUT, DELETE).
-5.  **Tratamento de Exceções:** Implementação de `try/catch` para lidar com erros nas requisições HTTP.
-6.  **Tela de Login:** Possui uma tela de login com validação e exibição de mensagens de erro.
-7.  **CRUD de Livros (Serviços):** Funcionalidades completas de Criar, Ler, Atualizar e Deletar livros, com múltiplos campos.
-8.  **CRUD de Usuários:** Funcionalidades completas de Criar, Ler, Atualizar e Deletar usuários do sistema.
-9.  **Navbar e Footer Fixos:** Componentes de navegação e rodapé presentes em todas as telas, exceto a de login.
-10. **Navegação SPA:** Uso de `react-router-dom` para navegação entre as diferentes rotas da aplicação.
+A aplicação oferece as seguintes funcionalidades principais:
 
-## Tecnologias Utilizadas
+* **Autenticação de Usuário:** Uma tela de login robusta com validação e feedback de erro, garantindo acesso seguro à plataforma.
+* **Interface Responsiva:** Design adaptável para proporcionar uma experiência de usuário consistente e agradável em desktops, tablets e dispositivos móveis.
+* **Navegação Intuitiva (SPA):** Utiliza `react-router-dom` para uma navegação fluida entre diferentes seções, como a Home, Explorar Livros e áreas administrativas.
+* **Layout Consistente:** Inclui uma barra de navegação (`Navbar`) e rodapé (`Footer`) fixos, garantindo uma estrutura de layout padronizada em toda a aplicação (exceto na tela de login).
+* **Gerenciamento de Conteúdo (CRUD de Livros):** Funcionalidades completas de **Criação, Leitura, Atualização e Exclusão** (CRUD) para o catálogo de livros, permitindo a gestão eficiente dos títulos disponíveis na plataforma.
+* **Gerenciamento de Usuários (CRUD de Usuários):** Operações CRUD para a administração de contas de usuário, oferecendo controle sobre o acesso e os perfis dentro do sistema.
+* **Consumo de API:** Interage com uma API RESTful simulada (JSON Server) para persistência e recuperação de dados, demonstrando habilidades em requisições assíncronas.
+* **Tratamento de Erros:** Implementação de `try/catch` para gerenciamento robusto de exceções em todas as requisições HTTP, melhorando a resiliência da aplicação.
 
-* **React.js:** Biblioteca JavaScript para construção de interfaces de usuário.
-* **JSON Server:** Ferramenta para criar APIs REST simuladas rapidamente.
-* **HTML5 & CSS3:** Para a estruturação e estilização da interface.
-* **JavaScript (ES6+):** Linguagem de programação principal.
-* **Git & GitHub:** Para controle de versão e hospedagem do código.
-* **(Opcional: Adicione aqui se usar) Frameworks CSS:** Ex: Tailwind CSS, Bootstrap, Material-UI, etc.
-* **(Opcional: Adicione aqui se usar) Bibliotecas de Requisição:** Ex: Axios (além do Fetch API nativo).
+## Tecnologias e Ferramentas
 
-## Como Rodar o Projeto (Para Desenvolvedores)
+* **Front-end Framework:** [React.js](https://react.dev/) - Biblioteca JavaScript para construção de interfaces de usuário reativas e componentizadas.
+* **Build Tool:** [Vite](https://vitejs.dev/) - Ferramenta de build de nova geração para um desenvolvimento front-end mais rápido e eficiente.
+* **Roteamento:** [React Router DOM](https://reactrouter.com/en/main) - Biblioteca para roteamento declarativo, facilitando a navegação em SPAs.
+* **Backend Simulado:** [JSON Server](https://github.com/typicode/json-server) - Ferramenta para criar APIs RESTful mockadas de forma rápida, ideal para desenvolvimento front-end sem um backend real.
+* **Linguagens:** HTML5, CSS3, JavaScript (ES6+).
+* **Controle de Versão:** [Git](https://git-scm.com/) & [GitHub](https://github.com/) - Para versionamento de código e colaboração.
+* **(Opcional: Adicione aqui se usar)** **Frameworks CSS:** Ex: [Tailwind CSS](https://tailwindcss.com/), [Bootstrap](https://getbootstrap.com/), [Material-UI](https://mui.com/), etc.
+* **(Opcional: Adicione aqui se usar)** **Bibliotecas de Requisição HTTP:** Ex: [Axios](https://axios-http.com/) (além da Fetch API nativa do JavaScript).
 
-### Pré-requisitos
+## Estrutura do Repositório
 
-Certifique-se de ter o [Node.js](https://nodejs.org/en/) e o [npm](https://www.npmjs.com/get-npm) (ou Yarn) instalados em sua máquina.
-
-### Instalação
-
-1.  Clone este repositório 
-    ```bash
-    git clone [https://github.com/Xandetds/Projeto-Front-end.git](https://github.com/Xandetds/Projeto-Front-end.git)
-    ```
-
-2.  Navegue até a pasta do projeto 
-    ```bash
-    cd Projeto-Front-end
-    ```
-
-3.  Instale as dependências do projeto React:
-    ```bash
-    npm install
-    ```
-
-### Executando o JSON Server
-
-Para simular o backend e ter acesso aos dados, você precisa rodar o JSON Server em um terminal separado.
-
-1.  Crie um arquivo `db.json` na raiz do projeto com seus dados de livros e usuários. 
-2.  No terminal, na raiz do projeto, execute:
-    ```bash
-    npx json-server --watch db.json --port 3001
-    ```
-    O servidor estará disponível em `http://localhost:3001`.
-
-### Executando a Aplicação React
-
-Com o JSON Server rodando, abra *outro* terminal na raiz do projeto e execute:
-
-```bash
-npm run dev
-# ou, se você usou create-react-app:
-# npm start
-A aplicação React será iniciada em http://localhost:5173 (ou http://localhost:3000).
-
-Estrutura do Projeto
+O projeto está organizado na seguinte estrutura de diretórios, promovendo modularidade e clareza:
+<pre>
+.
 Projeto-Front-end/
 ├── public/
 ├── src/
@@ -88,5 +49,120 @@ Projeto-Front-end/
 ├── package.json      # Dependências e scripts do projeto
 ├── README.md         # Este arquivo
 └── ...
-Status do Projeto
+</pre>
+
+## Progresso e Próximos Passos
+
+Este `README.md` será atualizado continuamente para refletir o progresso e as próximas etapas de desenvolvimento do projeto.
+
+### Fase 1: Configuração e Estrutura Base (Concluída)
+
+* Repositório GitHub e configurações iniciais (`README.md`, `.gitignore`).
+* Configuração do ambiente de desenvolvimento React com Vite e instalação de dependências.
+* Definição da estrutura de pastas (`src/components`, `src/pages`, `src/services`, `src/styles`).
+* Configuração inicial do `db.json` para o JSON Server.
+* Implementação de roteamento (`react-router-dom`) e criação dos componentes `App.jsx`, `Navbar`, `Footer`, `LoginPage`, `HomePage` com estilos iniciais.
+
+### Fase 2: Autenticação de Usuário (Em Andamento)
+
+* Desenvolvimento da lógica de login e validação de credenciais contra o JSON Server.
+* Implementação de feedback visual para erros de autenticação.
+* Configuração de redirecionamento pós-login.
+* Adição de funcionalidade de logout.
+
+### Fase 3: Gerenciamento de Conteúdo (CRUD de Livros)
+
+* Implementação das interfaces e lógica para listar, adicionar, editar e remover livros.
+* Desenvolvimento de formulários dedicados para as operações de criação e edição.
+* Integração completa com a API do JSON Server para persistência dos dados dos livros.
+
+### Fase 4: Gerenciamento de Usuários (CRUD de Usuários)
+
+* Criação das interfaces e lógica para listar, adicionar, editar e remover usuários.
+* Integração com a API do JSON Server para as operações de usuário.
+
+### Fase Final: Polimento e Implantação
+
+* Garantir a responsividade e o refinamento visual em todos os dispositivos.
+* Revisão de código e otimização de performance.
+* Testes abrangentes de todas as funcionalidades.
+* Preparação para a demonstração e possível implantação (ex: Vercel, Netlify).
+
+## Como Rodar o Projeto Localmente
+
+Para configurar e executar o projeto em sua máquina:
+
+### Pré-requisitos
+
+Certifique-se de ter o [Node.js](https://nodejs.org/en/) (versão LTS recomendada) e o [npm](https://www.npmjs.com/get-npm) (gerenciador de pacotes do Node.js) instalados.
+
+### Instalação
+
+1.  Clone este repositório:
+    ```bash
+    git clone [https://github.com/Xandetds/Projeto-Front-end.git](https://github.com/Xandetds/Projeto-Front-end.git)
+    ```
+
+2.  Navegue até o diretório do projeto:
+    ```bash
+    cd Projeto-Front-end
+    ```
+
+3.  Instale as dependências:
+    ```bash
+    npm install
+    ```
+
+### Executando o Backend Simulado (JSON Server)
+
+Em um **novo terminal** na raiz do projeto (`Projeto-Front-end`):
+
+1.  Crie o arquivo `db.json` com os dados iniciais de livros e usuários. Exemplo:
+    ```json
+    {
+      "livros": [
+        {
+          "id": 1,
+          "titulo": "O Senhor dos Anéis",
+          "autor": "J.R.R. Tolkien",
+          "genero": "Fantasia",
+          "sinopse": "Uma aventura épica...",
+          "urlCapa": "[https://example.com/capa_sda.jpg](https://example.com/capa_sda.jpg)",
+          "conteudoTextoInicial": "Primeiro parágrafo do livro..."
+        }
+      ],
+      "usuarios": [
+        {
+          "id": 1,
+          "nome": "Admin",
+          "email": "admin@livros.com",
+          "senha": "123",
+          "tipoUsuario": "admin"
+        }
+      ]
+    }
+    ```
+2.  Instale o JSON Server (se ainda não o fez):
+    ```bash
+    npm install json-server
+    ```
+3.  Inicie o servidor:
+    ```bash
+    npx json-server --watch db.json --port 3001
+    ```
+    O servidor da API estará disponível em `http://localhost:3001`. Mantenha este terminal ativo.
+
+### Executando a Aplicação Front-end (React)
+
+Em **outro terminal** (mantendo o JSON Server rodando) na raiz do projeto (`Projeto-Front-end`):
+
+```bash
+npm run dev
+```
+A aplicação React será iniciada em `http://localhost:5173`. Mantenha este terminal ativo.
+
+##Status do Projeto
 Em desenvolvimento. As funcionalidades estão sendo implementadas incrementalmente.
+
+Autores
+Alexandre Tibes da Silva
